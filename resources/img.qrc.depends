@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>icons/Customer Copy.png</file>
+        <file>icons/CustomerService.png</file>
+        <file>icons/robot.png</file>
+        <file>icons/sound_icon.png</file>
+        <file>icons/sound_hover.png</file>
+        <file>icons/User.png</file>
+        <file>icons/loading4.gif</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,9 @@
+<library path="lib/libdialogue_panel">
+  <class name="dialogue_panel/DialoguePanel"
+         type="dialogue_panel::DialoguePanel"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel for dialogue interaction
+    </description>
+  </class>
+</library>

@@ -1,0 +1,18 @@
+<launch>
+  <!-- 其他节点配置（如主窗口、ASR服务等） -->
+
+  <!-- TTS服务节点 -->
+  <node 
+    name="tts_service_node"
+    pkg="dialogue_panel"   
+    type="script/tts_service.py"    
+    output="screen"                  
+    required="true">               
+    
+    <!-- 显式指定Python解释器路径 -->
+    <param name="executable" value="/home/sumi/anaconda3/bin/python" />
+  
+  </node>
+
+
+</launch>
