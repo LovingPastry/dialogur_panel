@@ -23,7 +23,7 @@ cd ~/catkin_ws/src
 git clone https://github.com/yourusername/dialogue_panel.git
 ```
 
-### 2. 正确安装好[ASR](speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online/README.md)和[TTS](Kokoro-82M-v1.1-zh/README.md)的依赖
+### 2. 正确安装好[ASR](speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online/funASR.ipynb)和[TTS](Kokoro-82M-v1.1-zh/KokoroTTS.ipynb)的依赖，下载模型文件
 
 ### 3. 编译
 
