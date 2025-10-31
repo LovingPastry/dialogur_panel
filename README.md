@@ -6,16 +6,24 @@
 
 </div>
 
-
 ## 功能
-* Qt对话聊天框基于https://github.com/ShaShiDiZhuanLan/Demo_MessageChat_Qt.git
+
+* Qt对话聊天框基于https://github.com/ShaShiDiZhuanLan/Demo_MessageChat_Qt.git实现
 * 既可以在RVIZ中以panel插件的形式调用，也可以单独作为ROS包启动。
 * 在输入框，输入可以通过键盘打字，也可以通过语音输入。
 * 以微信聊天风格显示输出结果，可以通过tts模块将文本转换为语音播放。
 * 通过ROS topic实现的信息交互，包括用户输入和机器人输出。
 
+## 环境
 
-## 安装
+* Ubuntu 20.04 LTS
+* ROS Noetic
+* Qt5.15.2
+* C++14
+* python>=3.9(给tts模块使用，如果不需要asr&tts模块可以不用python)
+
+## 安装与使用
+
 ### 1. 下载源代码到~/catkin_ws/src/下
 
 ```bash
@@ -33,6 +41,7 @@ catkin_make
 ```
 
 ### 4. 运行
+
 #### 4.1 启动TTS服务
 
 如果需要tts运行结果，则需要提前在安装了kokoro的虚拟环境下运行script/tts_service.py
@@ -42,16 +51,27 @@ conda activate kokoro
 python script/tts_service.py
 ```
 
-#### 4.2 终端中打开RVIZ
+#### 4.2 当做RVIZ插件来运行
+
+1. 先启动roscore和rviz
+
+   ```bash
+   roscore
+   rviz
+   ```
+
+2. 添加对话面板
+
+    打开RVIZ后，点击左上角第二个按钮"Panels"->"Add New Panel"->"dialogue_panel"->"DialoguePanel"即可看到对话面板。
+
+#### 4.3 或者当做ROS包来运行
 
 ```bash
-roscore
-rviz
+roslaunch dialogue_panel dialogue_panel.launch
 ```
 
-#### 4.3 打开RVIZ后，点击左上角第二个按钮"Panels"->"Add New Panel"->"dialogue_panel"->"DialoguePanel"
-
 #### 4.4 运行与测试
+
 * 在文本框中输入内容后，点击"发送"按钮或者按下Enter键，即可发送消息到"/user_msg"话题。
 * 按住“说话”按钮，同时说话，识别到的文字会加入到输入框中。
 * 对话框订阅"/bot_msg"话题，获取机器人的输出结果。
