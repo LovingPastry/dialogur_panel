@@ -8,7 +8,7 @@
 
 ## 功能
 
-* Qt对话聊天框基于https://github.com/ShaShiDiZhuanLan/Demo_MessageChat_Qt.git实现
+* Qt对话聊天框基于实现QListWidget+QPainter，[参考资料](https://github.com/ShaShiDiZhuanLan/Demo_MessageChat_Qt.git)。
 * 既可以在RVIZ中以panel插件的形式调用，也可以单独作为ROS包启动。
 * 在输入框，输入可以通过键盘打字，也可以通过语音输入。
 * 以微信聊天风格显示输出结果，可以通过tts模块将文本转换为语音播放。
