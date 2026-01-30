@@ -61,8 +61,8 @@ AsrWorker::~AsrWorker() {
 void AsrWorker::initialize() {
     qDebug() << "正在执行AsrWorker初始化，线程ID:" << QThread::currentThreadId();
     if (!Py_IsInitialized()) {  // 仅在未初始化时设置环境并初始化
-        const char* python_home = "/home/sumi/anaconda3/envs/igibson";  // 替换为你的虚拟环境路径
-        const char* python_site_packages = "/home/sumi/anaconda3/envs/igibson/lib/python3.8/site-packages";  // 替换为你的site-packages路径
+        const char* python_home = "/home/agilex/miniconda3/envs/asr";  // 替换为你的虚拟环境路径
+        const char* python_site_packages = "/home/agilex/miniconda3/envs/asr/lib/python3.8/site-packages";  // 替换为你的site-packages路径
 
         // 设置PYTHONHOME（指定Python主目录）
         setenv("PYTHONHOME", python_home, 1);

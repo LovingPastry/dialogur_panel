@@ -1,4 +1,3 @@
-#!/home/sumi/anaconda3/bin/python
 import rospy
 import rospkg
 import threading  # 新增：导入线程模块

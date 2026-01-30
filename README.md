@@ -31,13 +31,34 @@ cd ~/catkin_ws/src
 git clone https://github.com/yourusername/dialogue_panel.git
 ```
 
-### 2. 正确安装好[ASR](speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online/funASR.ipynb)和[TTS](Kokoro-82M-v1.1-zh/KokoroTTS.ipynb)的依赖，下载模型文件
+### 2. 安装依赖
+
+#### 2.1 安装QT5相关依赖
+
+```
+sudo apt-get install qtmultimedia5-dev libqt5multimedia5-plugins
+sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+```
+
+#### 2.2 (选做)安装语音转文字模块ASR
+
+参考[ASR](speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online/funASR.ipynb)下载模型文件
+
+#### 2.3 (选做)安装文字转语音模块TTS
+
+参考[TTS](Kokoro-82M-v1.1-zh/KokoroTTS.ipynb)，下载模型文件
 
 ### 3. 编译
 
 ```bash
 cd ~/catkin_ws
 catkin_make
+```
+给python文件赋予权限
+
+```
+cd ~/catkin_ws/src/dialogur_panel
+sudo chmod +x ./script/*
 ```
 
 ### 4. 运行

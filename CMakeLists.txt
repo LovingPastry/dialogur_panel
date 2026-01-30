@@ -24,7 +24,6 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLIB REQUIRED glib-2.0)
 pkg_check_modules(GSTREAMER REQUIRED gstreamer-1.0)
 
-# set(Python3_EXECUTABLE "/home/sumi/anaconda3/bin/python")
 find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 find_package(CURL REQUIRED)
 find_package(TIFF REQUIRED)
@@ -156,6 +155,7 @@ include_directories(
   include
   src
   script
+  ${CMAKE_CURRENT_BINARY_DIR} 
   ${Python3_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
   ${Qt5Widgets_INCLUDE_DIRS}

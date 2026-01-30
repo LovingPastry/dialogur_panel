@@ -1,4 +1,4 @@
-#!/home/sumi/anaconda3/envs/igibson/bin/python3
+#!/home/agilex/miniconda3/envs/asr/bin/python3
 import sys
 import threading  # 新增：导入threading模块
 print("当前python解释器路径:", sys.executable)
